@@ -1,4 +1,4 @@
-package k6_fs
+package fs
 
 import (
 	"os"
