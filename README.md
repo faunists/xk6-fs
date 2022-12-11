@@ -11,14 +11,19 @@ xk6 build --with github.com/faunists/xk6-fs@latest
 ```javascript
 import file from 'k6/x/fs';
 
-const root = '.';
+const root = 'samples';
 
 export default function () {
-    file.walkMatch(root, '*.js');
+    const jsFiles = file.walkMatch(root, '*.js');
+    console.log(jsFiles)
 }
 ```
 
 ## Run sample script
 ```shell
 make run-sample
+```
+then you should see something like:\
+```log
+INFO[0000] ["samples/falcon.js","samples/tiger.js"]      source=console
 ```
