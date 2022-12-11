@@ -1,4 +1,4 @@
-module k6-fs
+module github.com/faunists/xk6-fs
 
 go 1.19
 
